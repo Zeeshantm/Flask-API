@@ -1,6 +1,9 @@
 {
+<<<<<<< HEAD
     "git.allowForcePush": true,
     "git.requireGitUserConfig": false,
+=======
+>>>>>>> 3e855d0c24a9ea2ed0322b4776a72107623c19e2
     "python.testing.pytestArgs": [
         "."
     ],

@@ -1,4 +1,3 @@
-import sys
 from flask import Flask, jsonify, request
 import re
 
