@@ -1,6 +1,5 @@
 import pytest
 import requests
-from API import home
 import json
 import logging
 
@@ -8,13 +7,13 @@ logging.basicConfig(filename="logfile.log",filemode='w')
 
 url = "http://127.0.0.1:5000" 
 
-def test_case():
+def test_case1():
    req = requests.get(url+'/v1/sanitized/input')
    assert req.status_code == 200
    data = req.json()
    assert data['status'] == 'Get Method Working'
 
-def test_case1():
+def test_case2():
    url = "http://127.0.0.1:5000/v1/sanitized/input"
 
    #Body
