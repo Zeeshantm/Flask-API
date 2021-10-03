@@ -10,7 +10,9 @@ def home():
         # Json Handler for GET Method
         if(request.method=='GET'):
             data  = "Get Method Working"
-            return jsonify ({'Status':data})
+            set = jsonify({'status':data})
+            set.status_code ==200
+            return set
 
         # Json Handler for POST Method
         elif(request.method=='POST'):
@@ -26,11 +28,11 @@ def home():
                 result = "UnSanitized"
 
             # Return the Output
-            return jsonify({'Result':result})
+            set = jsonify({'Result':result})
+            set.status_code == 200
+            return set
 
     except Exception as err:
         return jsonify ({'Error':"Execption in Handler "+err.__str__()})
         
-
-
     app.run()
